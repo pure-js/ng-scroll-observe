@@ -1,0 +1,12 @@
+
+.box {
+    height: 2700px;
+}
+
+.box_small {
+    height: 2400px;
+}
+
+.info-box {
+    border: 1px solid red;
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular directive</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-app="app">
+    <div class="box">
+      <h2>Scroll me!</h2>
+    </div>
+
+    <div ng-controller="controller">
+      <div scroll-observe="myAlert()" class="info-box">Alerted</div>
+    </div>
+
+    <div class="box_small"></div>
+  </body>
+</html>
