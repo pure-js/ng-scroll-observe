@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Directive</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-app="app">
+    <div class="box"></div>
+
+    <div ng-controller="controller">
+      <div scroll-observe="myAlert()" class="info-box">Alerted</div>
+    </div>
+
+    <div class="box_small"></div>
+  </body>
+</html>
