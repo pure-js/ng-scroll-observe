@@ -4,7 +4,7 @@
   "description": "angular directive",
   "main": "src/app.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint src/*.js"
+    "test": "eslint src/*.js"
   },
   "repository": {
     "type": "git",
