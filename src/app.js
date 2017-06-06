@@ -1,5 +1,7 @@
 function MainCtrl($scope, $log) {
-  $scope.myAlert = function () {
+  var vm = this;
+  
+  vm.myAlert = function () {
     $log.log('Alert');
   };
 }
@@ -21,15 +23,12 @@ let app = angular.module('app', [])
     function link(scope, element, attrs) {
       let fired = false;
 
-      angular.element($window).bind('scroll', function() {
-        if(isVisible(element)) {
-          if(!fired) {
-            scope.$apply(attrs.scrollObserve);
-          }
-          fired = true;
-        } else {
-          fired = false;
+      angular.element($window).bind('scroll', () => {
+        if (isVisible(element) && !fired) {
+          scope.$apply(attrs.scrollObserve);
         }
+
+        fired = isVisible(element);
         scope.$digest();
       });
     }
